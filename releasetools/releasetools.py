@@ -28,11 +28,11 @@ def IncrementalOTA_InstallEnd(info):
 def AddImage(info, dir, basename, dest):
   data = info.input_zip.read(dir + "/" + basename)
   common.ZipWriteStr(info.output_zip, basename, data)
-  info.script.Print("Patching {} image unconditionally...".format(dest.split('/')[-1]))
+  info.script.Print("Flashing {} image has started ...".format(dest.split('/')[-1]))
   info.script.AppendExtra('package_extract_file("%s", "%s");' % (basename, dest))
 
 def PrintInfo(info, dest):
-  info.script.Print("Patching {} image unconditionally...".format(dest.split('/')[-1]))
+  info.script.Print("Flashing {} image has started ...".format(dest.split('/')[-1]))
 
 def OTA_InstallEnd(info):
   AddImage(info, "RADIO", "dtb.img", "/dev/block/by-name/dtb")
