@@ -1,3 +1,4 @@
+echo "I: - Fixing Stuff on A50 Device Trees"
 ### Start ###
 
 # Keystore patch
@@ -16,4 +17,6 @@ cp ./device/samsung/a50-common/patch/android.hardware.health@2.1-service.rc ./ha
 
 # BT calls fix 
 
-## Left to be filled
+cd system/bt;
+git apply ../../device/samsung/a50-common/.patch/BTCalls-On-Samsung.patch;
+cd -
