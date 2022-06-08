@@ -4,7 +4,7 @@ echo "I: - Fixing Stuff on A50 Device Trees"
 # Keystore patch
 echo "Applying Keystore patch...";
 cd system/security;
-git apply ../../device/samsung/a50-common/patch/Keystore.patch;
+git apply ../../device/samsung/a50-common/patch/Keystone.patch;
 cd - 
 
 # Light patch 
